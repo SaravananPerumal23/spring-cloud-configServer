@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    include: common
+restApi:
+  url: http://localhost:9999/testEndPoint-dev

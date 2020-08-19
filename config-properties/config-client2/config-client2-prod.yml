@@ -1,0 +1,2 @@
+restApi:
+  url: http://localhost:9999/testEndPoint-prod
