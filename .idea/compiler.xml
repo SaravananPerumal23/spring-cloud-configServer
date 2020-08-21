@@ -7,11 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-config-server" />
+        <module name="spring-config-client" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-config-client (1)" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-config-client" options="-parameters" />
+      <module name="spring-config-client (1)" options="-parameters" />
       <module name="spring-config-server" options="-parameters" />
     </option>
   </component>

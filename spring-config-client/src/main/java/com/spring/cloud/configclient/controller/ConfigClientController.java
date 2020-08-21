@@ -9,19 +9,27 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class ConfigClientController {
 
-	@Value("${msg:Config Server is not working. Please check...}")
-	private String msg;
+    @Value("${msg:Config Server is not working. Please check...}")
+    private String msg;
 
-	@Value("${config.properties.name}")
-	private String configValue;
+    @Value("${config.properties.name}")
+    private String configValue;
 
-	@GetMapping("/msg")
-	public String getMsg() {
-		return this.msg;
-	}
+    @Value("${restApi.url}")
+    private String urlValue;
 
-	@GetMapping("/config")
-	public String getConfig() {
-		return this.configValue;
-	}
+    @GetMapping("/msg")
+    public String getMsg() {
+        return this.msg;
+    }
+
+    @GetMapping("/config")
+    public String getConfig() {
+        return this.configValue;
+    }
+
+    @GetMapping("/url")
+    public String getUrl() {
+        return this.urlValue;
+    }
 }
